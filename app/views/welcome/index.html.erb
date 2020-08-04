@@ -1,0 +1,24 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+
+<%= 
+session[:demo]
+%>
+<%= 
+cookies[:banana]
+%>
+<%=
+ cookies[:query]
+%>
+
+<%=
+    @x
+%>
+
+
+
+<%= form_for :index, url: "/cookie", method: "get" do %>
+  <%= label_tag(:query, "Update Cookie:") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Submit") %>
+<% end %>
